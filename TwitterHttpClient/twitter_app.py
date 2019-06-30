@@ -3,12 +3,14 @@ import sys
 import requests
 import requests_oauthlib
 import json
+import config
 
 # Replace the values below with yours
-ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
-ACCESS_SECRET = 'YOUR_ACCESS_SECRET'
-CONSUMER_KEY = 'YOUR_CONSUMER_KEY'
-CONSUMER_SECRET = 'YOUR_CONSUMER_SECRET'
+ACCESS_TOKEN =      config.ACCESS_TOKEN
+ACCESS_SECRET =     config.ACCESS_SECRET
+CONSUMER_KEY =      config.CONSUMER_KEY
+CONSUMER_SECRET =   config.CONSUMER_SECRET
+
 my_auth = requests_oauthlib.OAuth1(CONSUMER_KEY, CONSUMER_SECRET,ACCESS_TOKEN, ACCESS_SECRET)
 
 
